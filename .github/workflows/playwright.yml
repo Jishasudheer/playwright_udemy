@@ -13,6 +13,8 @@ jobs :
       steps : 
         - name : checkout repository
           uses : actions/checkout@v2
+          with : 
+            node-verion : 16
         - name : Run tests
           run  : |
            echo "Starting the shopping store"
