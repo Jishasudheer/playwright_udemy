@@ -18,7 +18,7 @@ jobs :
         - name : Run tests
           run  : |
            echo "Starting the shopping store"
-           chmod +x ./shopping-store-windows-386.exe
+           chmod +x ./shopping-store-windows-386.exe &&
            ./shopping-store-windows-386.exe &
            echo "Install dependencies from lockfile"
            npm ci
