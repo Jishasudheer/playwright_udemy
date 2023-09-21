@@ -4,7 +4,7 @@ on :
     branches: [main]
 jobs : 
     Playwrighttests:
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       container : 
        image : mcr.microsoft.com/playwright:v1.29.1-focal
        env : 
