@@ -5,8 +5,19 @@ on :
 jobs : 
     Playwrighttests:
       runs-on: windows-latest
+      container : 
+       image : mcr.microsoft.com/playwright:v1.29.1-focal
+       env : 
+        ADMIN_PASSWORD: ${{secrets.Admin123}}
+
       steps : 
         - name : checkout repository
           uses : actions/checkout@v2
-        - name : say hello
-          run  : echo hello
+        - name : Run tests
+          run  : |
+           echo "Starting the shopping store"
+           ./shopping-store-windows-386 &
+           echo "Install dependencies from lockfile"
+           npm ci
+           echo "Run playwright tests"
+           npm run test:ci
