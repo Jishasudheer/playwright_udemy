@@ -8,7 +8,7 @@ export class ProductsPage{
         this.addButtons=page.locator('[data-qa="product-button"]')
         this.sortDropDown=page.locator('[data-qa="sort-dropdown"]')
         this.productTitles=page.locator('[data-qa="product-title"]')
-        // this.basketCounter=page.locator('[data-qa="header-basket-count"]')
+         this.basketCounter=page.locator('[data-qa="header-basket-count"]')
 
     }
     visit = async() =>{

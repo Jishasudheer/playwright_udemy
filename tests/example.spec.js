@@ -18,7 +18,6 @@ test.skip('homepage has title and links to intro page', async ({ page }) => {
   
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
-  await page.pause();
 });
 
 test.skip('2:Second test', async ({ page }) => {
@@ -38,5 +37,5 @@ test.skip('2:Second test', async ({ page }) => {
   
   // Expects the URL to contain intro.
   await expect(page).toHaveURL(/.*intro/);
-  await page.pause();
+ 
 });

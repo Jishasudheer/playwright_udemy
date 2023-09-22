@@ -1,6 +1,6 @@
 import {test,expect} from "@playwright/test"
 import { isDesktopViewport } from "../utils/isDesktopViewport";
-test.skip("Product Page Add to Basket",async({page}) =>{
+test("Product Page Add to Basket",async({page}) =>{
    await page.goto("/");
    const addToBakset=page.locator('[data-qa="product-button"]').first();
    const basketCounter=page.locator('[data-qa="header-basket-count"]')
