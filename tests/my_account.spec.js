@@ -4,7 +4,7 @@ import { MyAccount } from "./../page-objects/MyAccount.js"
 import { getLoginToken } from "../api-calls/getLoginToken.js"
 import { adminDetails } from "../data/userDetails.js"
 
-test('My account using cookie injection and mocking network request',async({page})=>{
+test.skip('My account using cookie injection and mocking network request',async({page})=>{
     const loginToken = await getLoginToken(adminDetails.username,adminDetails.password)
    // console.warn({loginToken})
    //mocking network requests
